@@ -74,10 +74,14 @@ h2{
 .about-content{
     display: flex;
     gap: 50px;
+    align-items: center;
 }
 .section-title{
     font-size: 30px;
 
+}
+.disme{
+    flex: 1;
 }
 
 span{
@@ -87,7 +91,7 @@ span{
 img{
 
     height: 150px;
-    width: 150px;
+    width: 100%s;
     border: 2px solid #64ffda;
     transition: all 0.3s ease;
     box-shadow: 0 0 5px #64ffda;
@@ -96,7 +100,9 @@ img{
     
 }
 .img2{
-    justify-content: end;
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
     
 
 }
@@ -109,9 +115,7 @@ img:hover{
     margin: 0;
     max-width: 900px;
 }
-.hidden{
-    display: none;
-}
+
 .job-tabs{
     display: flex;
     flex-direction: column;
@@ -119,7 +123,7 @@ img:hover{
     gap: 10px;
      padding: 10px 20px;
 }
-button{
+label{
     background: none;
     border: none;
     border-left: 2px solid #64ffda ;
@@ -127,6 +131,22 @@ button{
     text-align: left;
     padding: 10px 20px;
 
+}
+input[type="radio"]{
+    display: none;
+}
+.job-tabs label{
+    color: #8892b0;
+}
+.job-content2{
+    display: none;
+}
+#lab2:checked ~ .job-content2{
+    display: block;
+
+}
+#lab2:checked ~ .job-content {
+  display: none;
 }
 .work{
 font-size: 30px;
@@ -254,12 +274,24 @@ padding-left: 150px;
     font-size: 14px;
     margin-top: 15px;
 }
+.final{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.social-side{
+    position: static;
+    margin: 0 auto;
+}
 
 }
 
 .final{
+    align-items: center;
     text-align: center;
-    padding: 30px 0;
+    padding: 30px 30px;
+    border-top: 2px solid #64ffda;
+    box-shadow: 0 0 12px #64ffda ;
 
 }
 .social-side ul{
@@ -268,9 +300,17 @@ padding-left: 150px;
     padding: 0;
     list-style: none;
     gap: 25px;
+    width: 100px;
 
 }
+
+
 .social-side a:hover svg{
     box-shadow: 0 0 10px #64ffda ;
 
+}
+.social-side{
+    left: 30px;
+    top: 50px;
+    transform: translateY(-50%);
 }
